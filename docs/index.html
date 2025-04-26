@@ -95,19 +95,23 @@
     </li>
     
     <li class="">
-      <a href="https://tonycyriac.github.io/docs.github.io/docs/install-theme/">Install Theme</a>
+      <a href="https://tonycyriac.github.io/docs.github.io/docs/implementation/">Implemenation</a>
     </li>
     
     <li class="">
-      <a href="https://tonycyriac.github.io/docs.github.io/docs/configure/">Configuration</a>
+      <a href="https://tonycyriac.github.io/docs.github.io/docs/configure/"></a>
     </li>
     
     <li class="">
-      <a href="https://tonycyriac.github.io/docs.github.io/docs/specimen/">Specimen</a>
+      <a href="https://tonycyriac.github.io/docs.github.io/docs/example/"></a>
     </li>
     
     <li class="">
-      <a href="https://tonycyriac.github.io/docs.github.io/docs/example/">Hugo Whisper</a>
+      <a href="https://tonycyriac.github.io/docs.github.io/docs/install-theme/"></a>
+    </li>
+    
+    <li class="">
+      <a href="https://tonycyriac.github.io/docs.github.io/docs/specimen/"></a>
     </li>
     
   </ul>
@@ -140,7 +144,54 @@
 
 <div class="summary mb-2">
   
-  <h2 class="title-summary"><a href="https://tonycyriac.github.io/docs.github.io/docs/install-theme/">Install Theme</a></h2>
+  <h2 class="title-summary"><a href="https://tonycyriac.github.io/docs.github.io/docs/implementation/">Implemenation</a></h2>
+  <p><h1 id="specification"><!-- raw HTML omitted --><!-- raw HTML omitted -->Specification</h1>
+<ul>
+<li><a href="#EmbedderMicroservice">Embedder Microservice</a></li>
+<li><a href="#SanitizerMicroservice">Sanitizer Microservice</a></li>
+</ul>
+<h2 id="embedder-microservice">Embedder Microservice</h2>
+<p>Will call chroma DB, and similar enhancement will be retrieved from DB, and passed to LLM.</p>
+<p>Input : retrieves query from queue.</p>
+<p>Enhanced query blob from chroma db (if present), else default profile (also retrieved from chroma db) will be attached to the query retrieved from queue and passed to scoring agent</p>
+<h2 id="sanitizer-microservice">Sanitizer Microservice</h2>
+<p>input : query from llm</p></p>
+</div>
+
+
+<div class="summary mb-2">
+  
+  <h2 class="title-summary"><a href="https://tonycyriac.github.io/docs.github.io/docs/configure/"></a></h2>
+  <p><h2 id="syntax-highlighting">Syntax Highlighting</h2>
+<p>Whisper uses the in-built code highlighting that ships with hugo. <a href="https://gohugo.io/content-management/syntax-highlighting/">https://gohugo.io/content-management/syntax-highlighting/</a></p>
+<p>You can insert code snippets in any markdown file by using standard code fences syntax ie:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```
+</span></span><span class="line"><span class="cl">insert code here
+</span></span><span class="line"><span class="cl">```
+</span></span></code></pre></div><p>You can specify the langauge by adding a declaration after the backticks</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```javascript
+</span></span><span class="line"><span class="cl">insert code here
+</span></span><span class="line"><span class="cl">```
+</span></span></code></pre></div><h3 id="pygments-options">Pygments Options</h3>
+<p>The following code highlighting options are configured in the <code>config.toml</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">pygmentsCodeFences</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pygmentsCodefencesGuessSyntax</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pygmentsUseClasses</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></div><h2 id="main-menu">Main menu</h2>
+<p>Configure the main menu by editing the <code>config.toml</code></p></p>
+</div>
+
+
+<div class="summary mb-2">
+  
+  <h2 class="title-summary"><a href="https://tonycyriac.github.io/docs.github.io/docs/example/"></a></h2>
+  <p><p>Whisper is a minimal documentation theme built for Hugo. The design &amp; functionality is intentionally minimal.</p></p>
+</div>
+
+
+<div class="summary mb-2">
+  
+  <h2 class="title-summary"><a href="https://tonycyriac.github.io/docs.github.io/docs/install-theme/"></a></h2>
   <p><h2 id="create-a-new-hugo-site">Create a new Hugo site</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new site mynewsite
 </span></span></code></pre></div><p>This will create a fresh Hugo site in the folder <code>mynewsite</code>.</p>
@@ -158,14 +209,7 @@
 
 <div class="summary mb-2">
   
-  <h2 class="title-summary"><a href="https://tonycyriac.github.io/docs.github.io/docs/configure/">Configuration</a></h2>
-  <p>Syntax highlighting and menus can be configured via <code>config.toml</code>.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://tonycyriac.github.io/docs.github.io/docs/specimen/">Specimen</a></h2>
+  <h2 class="title-summary"><a href="https://tonycyriac.github.io/docs.github.io/docs/specimen/"></a></h2>
   <p><h1 id="markdown-test-page"><!-- raw HTML omitted --><!-- raw HTML omitted -->Markdown Test Page</h1>
 <ul>
 <li><a href="#Headings">Headings</a></li>
@@ -181,13 +225,6 @@
 <h1 id="headings"><!-- raw HTML omitted --><!-- raw HTML omitted -->Headings</h1>
 <h1 id="heading-one">Heading one</h1>
 <p>Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem.</p></p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://tonycyriac.github.io/docs.github.io/docs/example/">Hugo Whisper</a></h2>
-  <p><p>Whisper is a minimal documentation theme built for Hugo. The design &amp; functionality is intentionally minimal.</p></p>
 </div>
 
 
